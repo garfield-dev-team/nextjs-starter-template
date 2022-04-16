@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## 创建项目
+
+```bash
+$ npx create-next-app@latest blog-app --typescript --use-pnpm
+# or
+$ yarn create next-app blog-app --typescript --use-pnpm
+# or
+$ pnpm create next-app blog-app --typescript --use-pnpm
+```
+
 ## Getting Started
 
 First, run the development server:
