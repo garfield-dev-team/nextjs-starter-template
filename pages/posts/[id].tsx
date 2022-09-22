@@ -26,17 +26,19 @@ export async function getStaticProps({ params }: IPostId) {
 
 const Post: NextPage<IProps> = ({ postData }) => {
   return (
-    <div>
-      <Head>
-        <title>{postData.title}</title>
-      </Head>
-      <div>{postData.title}</div>
-      <br />
-      <div>{postData.id}</div>
-      <br />
-      <Date dateString={postData.date} />
-      <br />
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+    <div className="min-h-screen bg-gray-50 py-8 flex flex-col justify-center relative overflow-hidden lg:py-12">
+      <div className="relative w-full px-6 py-12 bg-white shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28">
+        <article className="mt-8 prose prose-slate mx-auto lg:prose-lg">
+          <Head>
+            <title>{postData.title}</title>
+          </Head>
+          <h1>{postData.title}</h1>
+          <br />
+          <Date dateString={postData.date} />
+          <br />
+          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        </article>
+      </div>
     </div>
   )
 }

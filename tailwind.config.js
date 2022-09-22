@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  // 只打包 content 匹配文件用到的 class
+  content: [
+    "./pages/**/*.tsx",
+    "./components/**/*.tsx",
+  ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
