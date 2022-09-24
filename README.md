@@ -14,6 +14,23 @@ $ yarn create next-app blog-app --typescript --use-pnpm
 $ pnpm create next-app blog-app --typescript --use-pnpm
 ```
 
+## 升级依赖
+
+可以直接用 `pnpm up` 命令，更新所有依赖，同时忽略 `package.json` 中的锁定规则：
+
+```bash
+$ pnpm up --latest
+# or
+$ pnpm up -L
+```
+
+也可以使用第三方工具：
+
+```bash
+$ npx taze major -w
+$ pnpm install
+```
+
 ## Getting Started
 
 First, run the development server:
